@@ -24,7 +24,7 @@ app.use("/api/auth", authRoutes);
 
 app.use("/api/blogs", blogRoutes);
 
-
+console.log("ENV CHECK:", process.env.MONGO_URI ? "FOUND" : "NOT FOUND");
 
 mongoose.connect(
     process.env.MONGO_URI

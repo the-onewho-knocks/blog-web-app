@@ -169,19 +169,119 @@
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
   overflow: hidden;
+  padding: var(--spacing-md);
 }
 
-.card-shimmer {
-  width: 100%;
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
   height: 100%;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-xs);
+}
+
+.card-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
   background: linear-gradient(
-    110deg,
-    transparent 40%,
-    rgba(255, 107, 53, 0.1) 50%,
-    transparent 60%
+    90deg,
+    var(--bg-tertiary) 25%,
+    var(--bg-elevated) 50%,
+    var(--bg-tertiary) 75%
   );
   background-size: 200% 100%;
-  animation: shimmer 3s infinite;
+  flex-shrink: 0;
+  animation: shimmer 2s infinite;
+}
+
+.card-meta {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.card-author {
+  width: 80px;
+  height: 12px;
+  background: linear-gradient(
+    90deg,
+    var(--bg-tertiary) 25%,
+    var(--bg-elevated) 50%,
+    var(--bg-tertiary) 75%
+  );
+  background-size: 200% 100%;
+  border-radius: 4px;
+  animation: shimmer 2s infinite;
+}
+
+.card-date {
+  width: 60px;
+  height: 10px;
+  background: linear-gradient(
+    90deg,
+    var(--bg-tertiary) 25%,
+    var(--bg-elevated) 50%,
+    var(--bg-tertiary) 75%
+  );
+  background-size: 200% 100%;
+  border-radius: 4px;
+  animation: shimmer 2s infinite 0.2s;
+}
+
+.card-title {
+  width: 100%;
+  height: 24px;
+  background: linear-gradient(
+    90deg,
+    var(--bg-tertiary) 25%,
+    var(--bg-elevated) 50%,
+    var(--bg-tertiary) 75%
+  );
+  background-size: 200% 100%;
+  border-radius: 6px;
+  margin-bottom: var(--spacing-xs);
+  animation: shimmer 2s infinite 0.3s;
+}
+
+.card-text {
+  width: 100%;
+  height: 12px;
+  background: linear-gradient(
+    90deg,
+    var(--bg-tertiary) 25%,
+    var(--bg-elevated) 50%,
+    var(--bg-tertiary) 75%
+  );
+  background-size: 200% 100%;
+  border-radius: 4px;
+  animation: shimmer 2s infinite 0.4s;
+}
+
+.card-text.short {
+  width: 70%;
+}
+
+.card-image {
+  width: 100%;
+  height: 140px;
+  background: linear-gradient(
+    90deg,
+    var(--bg-tertiary) 25%,
+    var(--bg-elevated) 50%,
+    var(--bg-tertiary) 75%
+  );
+  background-size: 200% 100%;
+  border-radius: var(--radius-sm);
+  margin-top: auto;
+  animation: shimmer 2s infinite 0.5s;
 }
 
 .card-1 {

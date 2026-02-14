@@ -118,13 +118,49 @@ const Home = () => {
 
           <div className="hero-visual">
             <div className="floating-card card-1">
-              <div className="card-shimmer"></div>
+              <div className="card-content">
+                <div className="card-header">
+                  <div className="card-avatar"></div>
+                  <div className="card-meta">
+                    <div className="card-author"></div>
+                    <div className="card-date"></div>
+                  </div>
+                </div>
+                <div className="card-title"></div>
+                <div className="card-text"></div>
+                <div className="card-text short"></div>
+                <div className="card-image"></div>
+              </div>
             </div>
             <div className="floating-card card-2">
-              <div className="card-shimmer"></div>
+              <div className="card-content">
+                <div className="card-header">
+                  <div className="card-avatar"></div>
+                  <div className="card-meta">
+                    <div className="card-author"></div>
+                    <div className="card-date"></div>
+                  </div>
+                </div>
+                <div className="card-title"></div>
+                <div className="card-text"></div>
+                <div className="card-text"></div>
+                <div className="card-text short"></div>
+              </div>
             </div>
             <div className="floating-card card-3">
-              <div className="card-shimmer"></div>
+              <div className="card-content">
+                <div className="card-header">
+                  <div className="card-avatar"></div>
+                  <div className="card-meta">
+                    <div className="card-author"></div>
+                    <div className="card-date"></div>
+                  </div>
+                </div>
+                <div className="card-title"></div>
+                <div className="card-text"></div>
+                <div className="card-text short"></div>
+                <div className="card-image"></div>
+              </div>
             </div>
           </div>
         </div>
