@@ -9,6 +9,20 @@ const authMiddleware =
 const upload =
     require("../middleware/uploadmiddleware");
 
+    router.post("/test", async (req, res) => {
+  const Blog = require("../models/blog"); // adjust path if needed
+
+  const blog = new Blog({
+    title: "First production blog",
+    content: "Stored in MongoDB Atlas via Railway",
+    author: "railway-test",
+    media: []
+  });
+
+  await blog.save();
+
+  res.json(blog);
+});
 
 
 router.get(
