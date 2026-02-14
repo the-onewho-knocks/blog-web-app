@@ -6,10 +6,34 @@ meta {
 
 post {
   url: http://localhost:5000/api/blogs
-  body: none
+  body: multipartForm
   auth: inherit
+}
+
+headers {
+  Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OTA3MTAxZjMxOTM2YzY1MzQ4N2JjZiIsImlhdCI6MTc3MTA3Mzg0NCwiZXhwIjoxNzcxNjc4NjQ0fQ.gMA7J0lm2HPntiKtbTLT_4BCv-roXqWN8nxjsOpFPq4
+  Content-Type: multipart/form-data
+}
+
+body:json {
+  title: My first blog
+  content: This is my blog content
+  media: image.jpg
+  media: video.mp4
+}
+
+body:multipart-form {
+  title: My first blog
+  content: This is my blog content
+  media: @file(C:\Users\GAJENDRA\Pictures\6d8e1cb1fb60bf903b20580b296d7abe.jpg)
+  media: @file(C:\Users\GAJENDRA\Pictures\memes op\6b31feda15aa4803bb5283f7d1b4142e.mp4)
+}
+
+body:file {
+  ~file: @file()
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

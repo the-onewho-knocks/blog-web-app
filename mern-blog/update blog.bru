@@ -1,0 +1,28 @@
+meta {
+  name: update blog
+  type: http
+  seq: 6
+}
+
+put {
+  url: http://localhost:5000/api/blogs/699075165ea0f349063d5ebc
+  body: json
+  auth: inherit
+}
+
+headers {
+  Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OTA3MTAxZjMxOTM2YzY1MzQ4N2JjZiIsImlhdCI6MTc3MTA3Mzg0NCwiZXhwIjoxNzcxNjc4NjQ0fQ.gMA7J0lm2HPntiKtbTLT_4BCv-roXqWN8nxjsOpFPq4
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "title": "Updated title",
+    "content": "Updated content"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,15 @@
+meta {
+  name: Get all blogs (Public feed)
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://localhost:5000/api/blogs
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
