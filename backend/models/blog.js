@@ -1,5 +1,16 @@
 const mongoose = require("mongoose");
 
+const mediaSchema = new mongoose.Schema({
+
+    url: String,
+
+    type: {
+        type: String,
+        enum: ["image", "video"]
+    }
+
+});
+
 const blogSchema = new mongoose.Schema({
 
     title: {
@@ -16,7 +27,9 @@ const blogSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "User",
         required: true
-    }
+    },
+
+    media: [mediaSchema]
 
 }, { timestamps: true });
 
