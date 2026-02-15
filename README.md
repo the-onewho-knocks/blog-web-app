@@ -874,6 +874,6 @@ cd frontend && npm install && npm run dev
 
 ---
 
-**Made with ❤️ by Blogverse Team**
+**Made with ❤️ by Hardik**
 
 *Happy Blogging! 📝✨*
