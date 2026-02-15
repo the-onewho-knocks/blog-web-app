@@ -1,6 +1,11 @@
 import axios from 'axios';
 
-const API_URL = '/api/blogs';
+// Set base URL based on environment
+const API_BASE_URL = import.meta.env.VITE_API_URL || '/api';
+
+axios.defaults.baseURL = API_BASE_URL;
+
+const API_URL = '/blogs';
 
 export const blogService = {
   // Get all blogs

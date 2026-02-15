@@ -3,6 +3,10 @@ import axios from 'axios';
 
 const AuthContext = createContext();
 
+// Set base URL based on environment
+const API_BASE_URL = import.meta.env.VITE_API_URL || '/api';
+axios.defaults.baseURL = API_BASE_URL;
+
 export const useAuth = () => {
   const context = useContext(AuthContext);
   if (!context) {
@@ -28,7 +32,7 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (email, password) => {
     try {
-      const response = await axios.post('/api/auth/login', { email, password });
+      const response = await axios.post('/auth/login', { email, password });
       const { token, user } = response.data;
       
       localStorage.setItem('token', token);
@@ -47,7 +51,7 @@ export const AuthProvider = ({ children }) => {
 
   const register = async (username, email, password) => {
     try {
-      await axios.post('/api/auth/register', { username, email, password });
+      await axios.post('/auth/register', { username, email, password });
       return { success: true };
     } catch (error) {
       return { 
